@@ -165,7 +165,6 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
 
   background-color: var(--primary-bcg-color);
   border-bottom: 1px solid #ececec;
@@ -223,7 +222,7 @@ img {
   color: var(--accent-color);
 }
 
-.links.current::after {
+.links.current::before {
   content: "";
   position: absolute;
   bottom: 0;
