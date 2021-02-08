@@ -158,7 +158,8 @@ img {
   color: var(--accent-color);
 }
 
-.current-underline {
+.links.current::after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -168,6 +169,17 @@ img {
 
   background: var(--accent-color);
 }
+
+/* .current-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background: var(--accent-color);
+} */
 
 .header .link-icon {
   margin-right: 10px;
