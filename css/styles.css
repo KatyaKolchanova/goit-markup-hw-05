@@ -3,6 +3,7 @@
   --sub-text-color: #212121;
   --accent-color: #2196f3;
   --sub-accent-color: rgba(33, 150, 243, 0.9);
+  --accent-color-button-hover: #188ce8;
   --primary-text-color-darkbcg: #ffffff;
   --sub-text-color-darkbcg: rgba(255, 255, 255, 0.6);
   --primary-bcg-color: #ffffff;
@@ -45,6 +46,7 @@ p {
   padding: 0;
   border: 0;
   min-width: 73px;
+  cursor: pointer;
 }
 
 img {
@@ -294,14 +296,16 @@ img {
   text-transform: uppercase;
 }
 
-.hero .button {
+.hero .button,
+.hero .button:hover,
+.hero .button:focus {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 32px;
   padding-left: 32px;
-  background-color: var(--accent-color);
   text-align: center;
 
+  background-color: var(--accent-color);
   color: var(--primary-text-color-darkbcg);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -309,6 +313,11 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero .button:hover,
+.hero .button:focus {
+  background-color: var(--accent-color-button-hover);
 }
 
 /* Стилизация секции с преимуществами */
