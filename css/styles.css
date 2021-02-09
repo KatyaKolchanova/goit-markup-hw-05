@@ -222,7 +222,7 @@ img {
   color: var(--accent-color);
 }
 
-.links.current::before {
+.links.current::after {
   content: "";
   position: absolute;
   bottom: 0;
