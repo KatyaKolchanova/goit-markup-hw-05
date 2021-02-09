@@ -16,6 +16,8 @@
   --sub-icon-fill-darkbcg: rgba(255, 255, 255, 0.1);
   --backdrop-color: rgba(0, 0, 0, 0.2);
   --close-icon-fill: #000000;
+  --action-duration: 250ms;
+  --action-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -195,6 +197,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color var(--action-duration) var(--action-timing-function);
 }
 .site-nav .links {
   color: var(--sub-text-color);
@@ -237,6 +241,8 @@ img {
 .header .link-icon {
   margin-right: 10px;
   fill: currentColor;
+
+  transition: fill var(--action-duration) var(--action-timing-function);
 }
 
 .header .link-icon:hover,
@@ -304,7 +310,6 @@ img {
   padding-left: 32px;
   text-align: center;
 
-  background-color: var(--accent-color);
   color: var(--primary-text-color-darkbcg);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -312,6 +317,13 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero .button {
+  background-color: var(--accent-color);
+
+  transition: background-color var(--action-duration)
+    var(--action-timing-function);
 }
 
 .hero .button:hover,
@@ -440,6 +452,10 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--primary-icon-fill);
+
+  transition: background-color var(--action-duration)
+      var(--action-timing-function),
+    color var(--action-duration) var(--action-timing-function);
 }
 
 .employee .link-thumb:hover,
@@ -476,6 +492,11 @@ img {
   border-radius: 4px;
   background-color: var(--primary-bcg-color);
   color: var(--primary-icon-fill);
+
+  transition: background-color var(--action-duration)
+      var(--action-timing-function),
+    color var(--action-duration) var(--action-timing-function),
+    border var(--action-duration) var(--action-timing-function);
 }
 
 .clients .link-thumb:hover,
@@ -552,10 +573,12 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  transition: color var(--action-duration) var(--action-timing-function);
 }
 
-.links:hover,
-.links:focus {
+.footer .links:hover,
+.footer .links:focus {
   color: var(--accent-color);
 }
 
@@ -573,6 +596,9 @@ img {
   border-radius: 50%;
   background-color: var(--sub-icon-fill-darkbcg);
   color: var(--primary-bcg-color);
+
+  transition: background-color var(--action-duration)
+    var(--action-timing-function);
 }
 
 .footer .link-thumb:not(:last-child) {
@@ -601,20 +627,7 @@ img {
   margin-right: 8px;
 }
 
-.buttons-list .button {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-right: 22px;
-  padding-left: 22px;
-  text-align: center;
-
-  background-color: var(--light-bcg-color);
-  color: var(--sub-text-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
-}
-
+.buttons-list .button,
 .button:hover,
 .button:focus,
 .button.current {
@@ -624,6 +637,25 @@ img {
   padding-left: 22px;
   text-align: center;
 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+}
+
+.buttons-list .button {
+  background-color: var(--light-bcg-color);
+  color: var(--sub-text-color);
+  box-shadow: none;
+
+  transition: background-color var(--action-duration)
+      var(--action-timing-function),
+    color var(--action-duration) var(--action-timing-function),
+    box-shadow var(--action-duration) var(--action-timing-function);
+}
+
+.buttons-list .button:hover,
+.buttons-list .button:focus,
+.buttons-list .button.current {
   background-color: var(--accent-color);
   color: var(--primary-text-color-darkbcg);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
